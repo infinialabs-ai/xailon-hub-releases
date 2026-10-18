@@ -1,0 +1,13 @@
+XailonHub
+Copyright 2026 Infinia Labs (Infinia Technologies)
+
+This product is an independent implementation. Its architecture is informed
+by NVIDIA Personal AI Router (https://github.com/NVIDIA/Personal-AI-Router),
+Apache License 2.0, Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES.
+No source code from that project is included.
+
+The dashboard embeds Space Grotesk, Copyright 2020 The Space Grotesk Project
+Authors (https://github.com/floriankarsten/space-grotesk), licensed under the
+SIL Open Font License 1.1. The license is included in the dashboard HTML and
+internal/api/web/licenses/Space-Grotesk-OFL.txt in the source tree, or
+licenses/Space-Grotesk-OFL.txt in release archives.

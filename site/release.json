@@ -1,0 +1,66 @@
+{
+  "version": "0.3.3",
+  "channel": "public-preview",
+  "desktop": [
+    {
+      "os": "macos",
+      "arch": "arm64",
+      "label": "Mac \u00b7 Apple Silicon",
+      "description": "For Macs with Apple M1, M2, M3, M4 or later chips. macOS 12+.",
+      "format": "DMG",
+      "filename": "XailonHub_0.3.3_macos_arm64.dmg",
+      "url": "https://github.com/infinialabs-ai/xailon-hub-releases/releases/download/v0.3.3/XailonHub_0.3.3_macos_arm64.dmg",
+      "available": false
+    },
+    {
+      "os": "macos",
+      "arch": "x64",
+      "label": "Mac \u00b7 Intel",
+      "description": "For Macs with an Intel processor. macOS 12+.",
+      "format": "DMG",
+      "filename": "XailonHub_0.3.3_macos_x64.dmg",
+      "url": "https://github.com/infinialabs-ai/xailon-hub-releases/releases/download/v0.3.3/XailonHub_0.3.3_macos_x64.dmg",
+      "available": false
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "label": "Windows \u00b7 ARM64",
+      "description": "For Snapdragon and other ARM64 PCs. Windows 11.",
+      "format": "EXE",
+      "filename": "XailonHub_0.3.3_windows_arm64_setup.exe",
+      "url": "https://github.com/infinialabs-ai/xailon-hub-releases/releases/download/v0.3.3/XailonHub_0.3.3_windows_arm64_setup.exe",
+      "available": false
+    },
+    {
+      "os": "windows",
+      "arch": "x64",
+      "label": "Windows \u00b7 Intel & AMD",
+      "description": "For 64-bit Intel and AMD PCs. Windows 10 or 11.",
+      "format": "EXE",
+      "filename": "XailonHub_0.3.3_windows_x64_setup.exe",
+      "url": "https://github.com/infinialabs-ai/xailon-hub-releases/releases/download/v0.3.3/XailonHub_0.3.3_windows_x64_setup.exe",
+      "available": false
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "label": "Linux \u00b7 ARM64",
+      "description": "For aarch64 computers. Ubuntu 24.04+ or compatible.",
+      "format": "DEB",
+      "filename": "XailonHub_0.3.3_linux_arm64.deb",
+      "url": "https://github.com/infinialabs-ai/xailon-hub-releases/releases/download/v0.3.3/XailonHub_0.3.3_linux_arm64.deb",
+      "available": false
+    },
+    {
+      "os": "linux",
+      "arch": "x64",
+      "label": "Linux \u00b7 Intel & AMD",
+      "description": "For amd64 computers. Ubuntu 24.04+ or compatible.",
+      "format": "DEB",
+      "filename": "XailonHub_0.3.3_linux_x64.deb",
+      "url": "https://github.com/infinialabs-ai/xailon-hub-releases/releases/download/v0.3.3/XailonHub_0.3.3_linux_x64.deb",
+      "available": false
+    }
+  ]
+}

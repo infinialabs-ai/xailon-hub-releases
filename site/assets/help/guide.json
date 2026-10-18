@@ -1,0 +1,416 @@
+{
+  "guides": [
+    {
+      "id": "first-start",
+      "category": "Get started",
+      "title": "Set up your first Hub",
+      "summary": "Turn one computer into a shared AI workspace.",
+      "icon": "home",
+      "minutes": 5,
+      "route": "settings",
+      "image": "setup",
+      "caption": "The setup wizard lets you choose what this computer will do.",
+      "before": "Have XailonHub installed and keep this computer awake. To share AI, at least one computer needs a running AI engine with a model.",
+      "steps": [
+        {
+          "title": "Open your dashboard",
+          "body": "In the desktop edition, open XailonHub from Applications or the Start menu. The app starts its bundled Hub and opens the workspace without a browser. Keep the app open while using it. In the command-line edition, open http://localhost:4747 in a browser; if using a standalone binary, run ./xailon-hub serve --open (Windows: .\\xailon-hub.exe serve --open) from its folder first."
+        },
+        {
+          "title": "Choose a role",
+          "body": "In the first-run wizard, select Make this the Hub for the computer that will coordinate your devices. Choose Just this computer for a solo workspace. Choose Join an existing Hub only when another Hub is already set up."
+        },
+        {
+          "title": "Give it a familiar name",
+          "body": "Continue to the hardware screen. Check the detected processor and memory, then name the computer something recognizable, such as Studio Mac. Continue to AI engines."
+        },
+        {
+          "title": "Choose the AI apps to share",
+          "body": "Start your existing AI engine and use Scan again. Select the apps you want to share. If there are none yet, you can continue and add one later in AI studio. XailonHub connects to engines; it does not download a model for you."
+        },
+        {
+          "title": "Review optional connections",
+          "body": "On the cloud screen, leave the API key empty to skip cloud backup. Enable network app access only if you want other apps or phones to connect directly. Paired Hub devices do not need this switch."
+        },
+        {
+          "title": "Finish and check Home",
+          "body": "Review the name, role and engines, then select Finish setup. Home shows the network map. Open AI studio to check for available models. You can reopen the wizard from Settings → Run setup again."
+        }
+      ],
+      "success": "Home opens with your computer in the map. A model appears in AI studio once a connected engine advertises one.",
+      "note": "Already set up? Run setup again can change your configuration. Review every choice before finishing; it is not a reset button."
+    },
+    {
+      "id": "connect-device",
+      "category": "Get started",
+      "title": "Connect another computer",
+      "summary": "Pair a Mac, Windows laptop or desktop with a short code.",
+      "icon": "devices",
+      "minutes": 4,
+      "route": "devices",
+      "image": "pairing",
+      "caption": "An example pairing window. Use the fresh code from your own Hub.",
+      "before": "Run XailonHub on both computers and connect them to the same local network. Keep the Hub’s pairing window open while joining.",
+      "steps": [
+        {
+          "title": "Get a code on the existing Hub",
+          "body": "Open My devices → Add a device, or use Connect a device on Home. The pairing window shows a six-digit code, its remaining time and the Hub address."
+        },
+        {
+          "title": "Open setup on the new computer",
+          "body": "Open the XailonHub app on the computer you want to add. Command-line edition users open http://localhost:4747 on that computer instead. Choose Join an existing Hub. If setup is already complete, open Settings → Run setup again first."
+        },
+        {
+          "title": "Name the new computer",
+          "body": "Continue through the hardware screen, give the computer a recognizable name, and select any local AI engines to share. It can join without an engine and use models shared by other devices."
+        },
+        {
+          "title": "Find the existing Hub",
+          "body": "On Join a hub, choose your Hub from the nearby list. If it is missing, use Scan again or type the Hub address shown in the pairing window, including port 4748. Do not use localhost for the other computer."
+        },
+        {
+          "title": "Enter the code and join",
+          "body": "Enter all six digits from the existing Hub, select Review, check the destination, then select Join hub. If the code expired, close the old pairing window and open Add a device again for a fresh code."
+        },
+        {
+          "title": "Verify both sides",
+          "body": "Open My devices on both computers. Each should show both devices as online within a few seconds. Home lets you select a device and open View device for its hardware details."
+        }
+      ],
+      "success": "The new computer appears online in the same workspace on both dashboards.",
+      "note": "A PIN is short-lived and single-use. Close pairing when finished. Add by address is for a device that already shares your cluster key; it does not replace first-time pairing. Keep invite codes private because they contain the cluster key."
+    },
+    {
+      "id": "add-engine",
+      "category": "Get started",
+      "title": "Connect an AI engine",
+      "summary": "Make the models in an existing AI app available to your Hub.",
+      "icon": "engines",
+      "minutes": 3,
+      "route": "engines",
+      "image": "engine",
+      "caption": "Choose the engine type and the address of its running server.",
+      "before": "Install an AI engine, download or load a compatible model in that app, and start its server. Open the Hub dashboard on that same computer.",
+      "steps": [
+        {
+          "title": "Find the server address",
+          "body": "In your AI app, locate its local server address and port. Common Hub defaults are Ollama at http://127.0.0.1:11434 and LM Studio at http://127.0.0.1:1234. Use the port actually configured in your app."
+        },
+        {
+          "title": "Open Connected AI apps",
+          "body": "Go to AI studio, scroll to Connected AI apps, and select Add an engine. This adds an engine to the computer whose dashboard you opened, not to a device selected in the map."
+        },
+        {
+          "title": "Select the matching engine",
+          "body": "Choose the app under Engine. For a compatible server without its own option, choose OpenAI-compatible. Enter the server’s base address, such as http://127.0.0.1:18092 for an engine running on port 18092. Do not paste a chat-completions endpoint."
+        },
+        {
+          "title": "Save and allow the Hub to restart",
+          "body": "Select Add engine. The Hub restarts to apply the change, so wait for Live to return. Adding an engine does not install or start the AI app itself."
+        },
+        {
+          "title": "Check models and try one",
+          "body": "The engine card should report healthy and list models. Choose one in Start a conversation, select This device only, type a short question and select Send. Other paired computers can then use the same model."
+        }
+      ],
+      "success": "The engine is healthy, its models are listed, and a short prompt produces an answer.",
+      "note": "127.0.0.1 means the machine running that Hub. For an engine on another computer, add it from that computer’s Hub and pair the Hubs. An NPU or GPU hardware badge alone does not prove the engine uses that accelerator."
+    },
+    {
+      "id": "first-chat",
+      "category": "Everyday use",
+      "title": "Get your first answer",
+      "summary": "Choose a model, ask a question and see which device answers.",
+      "icon": "msg",
+      "minutes": 2,
+      "route": "engines",
+      "image": "chat",
+      "caption": "AI studio shows model selection, routing choices and the answering device.",
+      "before": "At least one healthy engine or configured cloud provider must advertise the model you want.",
+      "steps": [
+        {
+          "title": "Choose a model",
+          "body": "Open AI studio. Under Start a conversation, pick a model from the Model list. Models across your hub shows which devices offer each model."
+        },
+        {
+          "title": "Choose where it runs",
+          "body": "Leave Run on set to Best available for automatic routing. Choose This device only for the current computer, My devices only for paired peers, or Cloud only for your configured cloud provider. A restricted choice fails if that destination has no suitable model."
+        },
+        {
+          "title": "Set privacy for this request",
+          "body": "Turn on Private: never send to the cloud when the prompt must stay on your devices. Do not combine this with Cloud only; those choices conflict. Private excludes cloud inference, but paired devices still receive the prompt."
+        },
+        {
+          "title": "Write a prompt",
+          "body": "Type a clear request into What’s on your mind? You can also choose Explain something, Find inspiration or Plan my day to fill in an example. Include the context and output you want."
+        },
+        {
+          "title": "Send and watch the answer",
+          "body": "Select Send. Text appears as it arrives. The Ran on label identifies the actual device and engine; the timing chip shows time to the first token. Some engines also return reasoning text, which the studio currently displays inline."
+        },
+        {
+          "title": "Inspect or try again",
+          "body": "Open Activity to check the model, destination and result. Return to AI studio to change the question or model. The studio sends each prompt as a new request; it does not preserve a multi-turn conversation history."
+        }
+      ],
+      "success": "An answer appears and Ran on identifies the device or cloud provider that served it.",
+      "note": "If there is no answer, check the No models or no answer troubleshooting guide. Loaded models usually start faster; a model’s first request may take longer."
+    },
+    {
+      "id": "understand-map",
+      "category": "Everyday use",
+      "title": "Read your network and activity",
+      "summary": "Understand the animated map, health cards and request history.",
+      "icon": "routing",
+      "minutes": 2,
+      "route": "overview",
+      "image": "home",
+      "caption": "Home combines your live device map with activity and routing summaries.",
+      "before": "Open Home after your Hub is running. Example screenshots show simulated devices, not your own network.",
+      "steps": [
+        {
+          "title": "Explore a device",
+          "body": "Select a computer in the map with a mouse, or focus it with Tab and press Enter. The selection panel shows its name and available models. Select View device for hardware, status and role details."
+        },
+        {
+          "title": "Filter or pause the map",
+          "body": "Use Everything, Devices or Cloud to focus the map. Use the pause button to stop animated traffic; data continues to refresh. The dotted paths indicate offline devices or optional cloud connections, not proof that a request used them."
+        },
+        {
+          "title": "Understand a request’s journey",
+          "body": "Below the map, select the numbered walkthrough steps or Play walkthrough. This explains routing; it does not send a prompt. Actual request animations appear when your Hub observes requests."
+        },
+        {
+          "title": "Check a computer’s health",
+          "body": "Open My devices for processor, graphics and memory gauges. Expand Details for the processor, address, version and last error. A dash means a metric is unavailable; it does not mean zero usage. Illustrations represent hardware families when the exact model is unknown."
+        },
+        {
+          "title": "Confirm where work ran",
+          "body": "Open Activity. Live requests lists the model, serving device, result, first-token latency and attempts. Use this record and the chat’s Ran on label to confirm a real route. Statistics are scoped to the Hub you are viewing; they are not a permanent audit log."
+        }
+      ],
+      "success": "You can identify the serving device and distinguish an online machine from an unavailable one.",
+      "note": "The walkthrough is educational. Home activity counts cover the running Hub session, and Activity keeps recent routing metadata rather than prompt bodies."
+    },
+    {
+      "id": "manage-devices",
+      "category": "Everyday use",
+      "title": "Manage sharing and device roles",
+      "summary": "Pause sharing, rename a computer, remove it or restore it.",
+      "icon": "laptop",
+      "minutes": 3,
+      "route": "devices",
+      "image": "devices",
+      "caption": "Device cards show roles, health, shared engines and device details.",
+      "before": "Choose the device carefully. Role changes affect whether others can use its engines and assistants.",
+      "steps": [
+        {
+          "title": "Find the right card",
+          "body": "Open My devices and match the name and hardware. Expand Details to verify its address when names are similar. The current computer is labeled this device."
+        },
+        {
+          "title": "Pause sharing with Observer",
+          "body": "Select Observer on that card, read the confirmation and select Change role. The device remains connected and can use the Hub, but it stops offering AI work to others."
+        },
+        {
+          "title": "Resume sharing with Worker",
+          "body": "Select Worker and confirm Change role to share that device’s engines and assistant pools again. Select Hub when you want it to serve as a preferred entry point for the workspace."
+        },
+        {
+          "title": "Rename a computer",
+          "body": "Open that computer’s own dashboard, go to Settings → This device, edit its name and select Save. The new name will appear on the other dashboards after they refresh."
+        },
+        {
+          "title": "Remove or restore a device",
+          "body": "Use the trash button on a remote device card to remove it and confirm the action. It appears under Removed devices. Select Restore there to allow it back; it must be running and reachable to reappear."
+        }
+      ],
+      "success": "The card reflects the selected role or name, or the removed computer appears in Removed devices.",
+      "note": "For permanent revocation, Settings offers cluster-key rotation. It restarts online devices and requires offline devices to pair again; plan this with your team. Removing a card does not uninstall the remote app."
+    },
+    {
+      "id": "privacy-apps",
+      "category": "Connections",
+      "title": "Set privacy and connect other apps",
+      "summary": "Control cloud backup and give another app your Hub address.",
+      "icon": "shield",
+      "minutes": 4,
+      "route": "settings",
+      "image": "settings",
+      "caption": "Settings separates cloud backup, network app access and app connection details.",
+      "before": "Know whether the app is on this computer or another device. Keep API keys private.",
+      "steps": [
+        {
+          "title": "Choose whether to use cloud backup",
+          "body": "Open Settings → Cloud backup. To enable it, enter the provider’s supported Base URL and API key, switch on Use the cloud when needed, and select Save cloud settings. To disable it, switch it off and save. Wait for Live after any restart."
+        },
+        {
+          "title": "Keep individual chats on your devices",
+          "body": "In AI studio, turn on Private: never send to the cloud for each request that needs it. Best available may use cloud when allowed; private requests cannot. Local-only routing fails when no suitable local or peer model is available."
+        },
+        {
+          "title": "Connect an app on this computer",
+          "body": "In Settings → Connect your apps, copy the Base URL into the app’s OpenAI-compatible provider settings. Select a model advertised by this Hub. Use your configured inference key if authentication is enabled; otherwise an app that requires a nonempty key can use local."
+        },
+        {
+          "title": "Connect an app on another computer or phone",
+          "body": "On the serving Hub, enable Settings → Phones and apps on your network → Allow LAN access. Wait for it to restart, then use http://YOUR-HUB-IP:4747/v1 and the displayed access key in the other app. Replace YOUR-HUB-IP with the Hub computer’s real LAN address; localhost on a phone points to the phone."
+        },
+        {
+          "title": "Check the result",
+          "body": "Send a short request from that app and check Activity on the serving Hub. Keep Allow LAN access off if only this computer and paired Hubs need access. Pairing and LAN app access are separate features."
+        }
+      ],
+      "success": "Your app can list a Hub model and receive an answer using the intended local or cloud policy.",
+      "note": "The LAN access key permits inference, not dashboard administration. Never put keys in screenshots or public messages. Private means no cloud inference; it is not a promise that a separate engine or app never logs data. In the desktop edition, the window uses a private admin address. Always copy the Base URL from Connect your apps; do not copy the window’s private session address. Port 4747 serves inference only while the desktop app owns the Hub."
+    },
+    {
+      "id": "assistants",
+      "category": "Everyday use",
+      "title": "Run a task with an assistant",
+      "summary": "Assign work, follow progress and respond to approval requests.",
+      "icon": "agents",
+      "minutes": 3,
+      "route": "agents",
+      "image": "assistants",
+      "caption": "Assistants shows available workers, new tasks and permission requests.",
+      "before": "An administrator must first install a supported agent and configure a pools entry on at least one device. Adding an AI engine alone does not create an assistant. If you see No pools, finish that setup before continuing.",
+      "steps": [
+        {
+          "title": "Choose an assistant",
+          "body": "Open Assistants. Your assistants lists configured workers and how many are busy. In New task, choose the Assistant you want to use."
+        },
+        {
+          "title": "Choose a device and describe the work",
+          "body": "Leave Device set to Any device to let the Hub choose a free worker, or select a specific device. Enter a concrete task under What should the agent do? State the expected result and any boundaries."
+        },
+        {
+          "title": "Start the task",
+          "body": "Select Run task. Choose the new entry under Tasks to open its Task timeline. Queued means it is waiting; Working means an agent is running it."
+        },
+        {
+          "title": "Review requests for permission",
+          "body": "If the task shows Needs approval, read the tool action and device name in the permission card. Select the allow or reject option that matches your intent. Approval options come from the agent; do not approve an action you do not understand."
+        },
+        {
+          "title": "Check the outcome",
+          "body": "Follow the timeline until Done, Failed or Cancelled. Read the output and verify the result. Use Cancel in an active task’s details if you need it to stop; cancellation does not undo actions already completed."
+        }
+      ],
+      "success": "The task reaches a final state and its timeline explains what happened.",
+      "note": "Workers act on the computer they run on. A Hub restart may interrupt active tasks. The demo workspace has simulated assistants so you can explore without running real work."
+    },
+    {
+      "id": "device-offline",
+      "category": "Troubleshooting",
+      "title": "A device is missing or offline",
+      "summary": "Work through discovery, pairing and connection problems.",
+      "icon": "wifi",
+      "minutes": 4,
+      "route": "devices",
+      "image": "devices",
+      "caption": "Expand Details on a device card to see its address and last connection error.",
+      "before": "Keep both computers awake and open their own local dashboards. Work through these checks in order.",
+      "steps": [
+        {
+          "title": "Check that both Hubs are running",
+          "body": "Open XailonHub on each computer. In the command-line edition, check http://localhost:4747 instead. Closing the desktop app stops its Hub; reopen it to reconnect. A laptop that is asleep or a command-line Hub launched from a closed terminal may also be offline. Wake it and allow a few seconds for reconnection."
+        },
+        {
+          "title": "Check the network",
+          "body": "Make sure the devices share a reachable network. Guest Wi-Fi, client isolation and some VPNs block connections between computers. Use a network that permits device-to-device traffic."
+        },
+        {
+          "title": "Try the address if discovery fails",
+          "body": "For a new device, keep Add a device open on the existing Hub. In the joining wizard, type the Hub’s displayed address with port 4748 and enter its fresh code. Discovery uses UDP 4749; direct peer connections use TCP 4748. Allow the Hub app through the firewall rather than turning the firewall off."
+        },
+        {
+          "title": "Replace an expired or rejected code",
+          "body": "Close the existing pairing window and open Add a device again. Use its current code on the joining computer. Codes expire and cannot be reused after a successful join; repeated incorrect guesses close the pairing window."
+        },
+        {
+          "title": "Check macOS local network access",
+          "body": "If macOS offers a local-network prompt, allow access for the Hub. If the app is listed in System Settings → Privacy & Security → Local Network, enable it. If no entry or prompt exists, do not keep searching for one: run the Hub from an active Terminal or SSH terminal session and retry. This is a diagnostic workaround, not a persistent installation."
+        },
+        {
+          "title": "Check previous removal or key changes",
+          "body": "Look under Removed devices and restore the device if appropriate. A device that missed a cluster-key rotation must pair again. If it still fails, note the device names, versions, addresses and the error in Details before asking your administrator for help."
+        }
+      ],
+      "success": "The device reappears online. An already-paired device normally reconnects automatically once reachable.",
+      "note": "Across separate sites, Settings → Connect from anywhere offers Xailon Relay. This is a separate connectivity choice, not a requirement for devices on the same reachable LAN."
+    },
+    {
+      "id": "no-answer",
+      "category": "Troubleshooting",
+      "title": "No models or no answer",
+      "summary": "Find out whether the engine, model or routing choice needs attention.",
+      "icon": "tool",
+      "minutes": 3,
+      "route": "engines",
+      "image": "engine",
+      "caption": "The engine’s address must match the server that is actually running.",
+      "before": "Open AI studio and identify the model you want to run and the computer that hosts it.",
+      "steps": [
+        {
+          "title": "Confirm the engine is running",
+          "body": "On the host computer, open the AI app, load or download the intended model, and start its server. Keep the app running. Hub hardware detection alone does not start inference."
+        },
+        {
+          "title": "Check the engine address",
+          "body": "In Connected AI apps, check the engine’s health and address. The port must match its server. For a service on port 18092, use http://127.0.0.1:18092 from the Hub on that same computer. If an address is wrong, remove the incorrect engine registration and add it again with the correct address."
+        },
+        {
+          "title": "Check whether the model is advertised",
+          "body": "Look in Models across your hub. If the model is absent, verify the AI app’s model list and server, then allow the Hub to refresh. A model name from a different provider may not be valid here."
+        },
+        {
+          "title": "Check your routing restrictions",
+          "body": "Use This device only only when the model exists on this computer; use My devices only when an online peer offers it. Private plus Cloud only cannot succeed. No healthy backend means none of the allowed destinations currently advertises a healthy matching model."
+        },
+        {
+          "title": "Try a short request",
+          "body": "Select an available model, use a compatible routing choice and ask a short question. The first request may take longer while a model loads. If only reasoning text appears, the engine may be using its output budget before the final answer; check that engine’s thinking and token settings."
+        },
+        {
+          "title": "Use Activity to narrow it down",
+          "body": "Check the request’s Result and Ran on destination. A successful route does not guarantee that a provider returns useful content. Check the engine’s own logs for model-loading, memory or provider errors if the Hub is reaching it but no usable answer comes back."
+        }
+      ],
+      "success": "A healthy model appears in AI studio and a short prompt produces a usable answer.",
+      "note": "Removing an engine registration restarts the Hub but does not uninstall the AI app. Schedule that change around active requests and tasks."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the difference between a Hub, an engine and a model?",
+      "answer": "The Hub connects devices and routes requests. An engine is an app that runs AI, such as an OpenAI-compatible local server. A model is the AI loaded or offered by that engine. An assistant is an agent that uses AI to carry out tasks.",
+      "guide": "add-engine"
+    },
+    {
+      "question": "Can I use the Hub without cloud access?",
+      "answer": "Yes. Run a model on this computer or a paired device and leave cloud backup off. Help text and example screenshots are bundled with the app and need no internet connection.",
+      "guide": "privacy-apps"
+    },
+    {
+      "question": "Does My devices only include this computer?",
+      "answer": "That option selects the cluster tier: other paired devices. Choose This device only for the current computer. Best available with Private enabled can use local and peer engines while excluding cloud inference.",
+      "guide": "first-chat"
+    },
+    {
+      "question": "Why do my hardware pictures look different from these screenshots?",
+      "answer": "The screenshots use an example workspace. Your cards reflect your detected platform and device name. When the exact chassis is unknown, the app uses a representative hardware-family illustration.",
+      "guide": "understand-map"
+    },
+    {
+      "question": "Why are there no assistants even though chat works?",
+      "answer": "Chat needs a healthy AI engine. Assistants also require an installed agent and a configured worker pool. Ask your administrator to configure a pools entry on a device; there is no pool-creation form in the dashboard.",
+      "guide": "assistants"
+    },
+    {
+      "question": "What should I share when asking for help?",
+      "answer": "Share the Hub version from Settings, your operating systems, the steps you took, the visible error and the model name. Redact API keys, invite codes, pairing codes, private prompts and sensitive addresses before sharing screenshots.",
+      "guide": "device-offline"
+    }
+  ]
+}
