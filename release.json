@@ -10,7 +10,10 @@
       "format": "DMG",
       "filename": "XailonHub_0.3.3_macos_arm64.dmg",
       "url": "https://github.com/infinialabs-ai/xailon-hub-releases/releases/download/v0.3.3/XailonHub_0.3.3_macos_arm64.dmg",
-      "available": false
+      "available": true,
+      "size_bytes": 6056209,
+      "size_label": "5.8 MB",
+      "sha256": "f877832774232ceb03490b1c939cd2da20077ff6524d88ba4be23185143a1fc2"
     },
     {
       "os": "macos",
@@ -20,7 +23,10 @@
       "format": "DMG",
       "filename": "XailonHub_0.3.3_macos_x64.dmg",
       "url": "https://github.com/infinialabs-ai/xailon-hub-releases/releases/download/v0.3.3/XailonHub_0.3.3_macos_x64.dmg",
-      "available": false
+      "available": true,
+      "size_bytes": 6614818,
+      "size_label": "6.3 MB",
+      "sha256": "389483b75a5ae7f73726906143abb9ca7eab48ba2099819509ee80a752572003"
     },
     {
       "os": "windows",
@@ -30,7 +36,10 @@
       "format": "EXE",
       "filename": "XailonHub_0.3.3_windows_arm64_setup.exe",
       "url": "https://github.com/infinialabs-ai/xailon-hub-releases/releases/download/v0.3.3/XailonHub_0.3.3_windows_arm64_setup.exe",
-      "available": false
+      "available": true,
+      "size_bytes": 224752810,
+      "size_label": "214.3 MB",
+      "sha256": "5be4b876db3be02acb1d25e4be9118b52e9ca605ca7d38b92ba91e6d3eba3685"
     },
     {
       "os": "windows",
@@ -40,7 +49,10 @@
       "format": "EXE",
       "filename": "XailonHub_0.3.3_windows_x64_setup.exe",
       "url": "https://github.com/infinialabs-ai/xailon-hub-releases/releases/download/v0.3.3/XailonHub_0.3.3_windows_x64_setup.exe",
-      "available": false
+      "available": true,
+      "size_bytes": 222035967,
+      "size_label": "211.7 MB",
+      "sha256": "63616ea8b0900fd2b3c2ab36fef365b14cb2773f3f22af8cac7b423bd670961b"
     },
     {
       "os": "linux",
@@ -50,7 +62,10 @@
       "format": "DEB",
       "filename": "XailonHub_0.3.3_linux_arm64.deb",
       "url": "https://github.com/infinialabs-ai/xailon-hub-releases/releases/download/v0.3.3/XailonHub_0.3.3_linux_arm64.deb",
-      "available": false
+      "available": true,
+      "size_bytes": 6368200,
+      "size_label": "6.1 MB",
+      "sha256": "e7b5270e650de4b2014e3e360f9cf3c9a149fe5a32341dca23d452b51bbfec3d"
     },
     {
       "os": "linux",
@@ -60,7 +75,10 @@
       "format": "DEB",
       "filename": "XailonHub_0.3.3_linux_x64.deb",
       "url": "https://github.com/infinialabs-ai/xailon-hub-releases/releases/download/v0.3.3/XailonHub_0.3.3_linux_x64.deb",
-      "available": false
+      "available": true,
+      "size_bytes": 6798938,
+      "size_label": "6.5 MB",
+      "sha256": "d5bb1560367caa6edb2410cfb7ce9c60e26e05486ccd4425c445d55243966ee1"
     }
   ]
 }
