@@ -1,7 +1,7 @@
 #!/bin/sh
 # XailonHub installer for macOS and Linux (x86-64 and ARM64, incl. GB10).
 #
-#   curl -fsSL https://raw.githubusercontent.com/infinialabs-ai/xailon-hub-releases/main/scripts/install.sh | sh
+#   curl -fsSL https://xailonhub.infinialabs.ai/install.sh | sh
 #
 # Options (after `sh -s --`):
 #   --hub                    make this machine the Hub (edge box / AI companion)

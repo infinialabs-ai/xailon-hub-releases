@@ -1,9 +1,9 @@
 # XailonHub installer for Windows 11 (x64 and ARM64: Snapdragon X, Core Ultra, Ryzen AI).
 #
-#   irm https://raw.githubusercontent.com/infinialabs-ai/xailon-hub-releases/main/scripts/install.ps1 | iex
+#   irm https://xailonhub.infinialabs.ai/install.ps1 | iex
 #
 # With options:
-#   & ([scriptblock]::Create((irm https://raw.githubusercontent.com/infinialabs-ai/xailon-hub-releases/main/scripts/install.ps1))) -Hub
+#   & ([scriptblock]::Create((irm https://xailonhub.infinialabs.ai/install.ps1))) -Hub
 #   ... -Join studio-hub.local -Pin 123456
 #   ... -Code xh1.…
 param(
